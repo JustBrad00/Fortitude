@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { Header } from '@/components/Header';
+import { PanicButton } from '@/components/panic-button';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         <main className="min-h-[calc(100vh-4rem)]">{children}</main>
+        <PanicButton />
       </body>
     </html>
   );
